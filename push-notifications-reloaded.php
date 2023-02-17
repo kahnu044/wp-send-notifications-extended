@@ -50,14 +50,14 @@ function wpsne_css_js()
 {
     if (isset($_GET['page']) && $_GET['page'] == 'wp-send-notifications-extended') {
 
-        wp_enqueue_style("pnr-font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+        wp_enqueue_style("wpsne-font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
-        wp_enqueue_script("pnr-custom-js", WPSNE_ASSETS_URL . "/js/pnr-js.js", array('jquery'), '1.0', false);
+        wp_enqueue_script("wpsne-custom-js", WPSNE_ASSETS_URL . "/js/wpsne-js.js", array('jquery'), '1.0', false);
 
-        wp_enqueue_style("pnr-custom-css", WPSNE_ASSETS_URL . '/css/pnr-css.css');
+        wp_enqueue_style("wpsne-custom-css", WPSNE_ASSETS_URL . '/css/wpsne-css.css');
 
         // add ajax url
-        wp_localize_script('pnr-custom-js', 'pnr', array('ajaxurl' => admin_url('admin-ajax.php')));
+        wp_localize_script('wpsne-custom-js', 'pnr', array('ajaxurl' => admin_url('admin-ajax.php')));
 
         // for media uploader
         wp_enqueue_media();
@@ -68,7 +68,7 @@ function wpsne_css_js()
 add_action('wp_ajax_wpsne_send_manual_send_notification', 'wpsne_send_manual_send_notification');
 function wpsne_send_manual_send_notification()
 {
-    include_once(WPSNE_PATH . 'api/pnr-one-signal-api.php');
+    include_once(WPSNE_PATH . 'api/wpsne-one-signal-api.php');
 
     // for admin send manual notification by the help of ajax
     if (isset($_POST['action']) && $_POST['action'] == 'wpsne_send_manual_send_notification') {
@@ -252,30 +252,30 @@ function wpsne_menu()
 function wpsne_menu_view()
 {
 
-    include_once(WPSNE_PATH . 'api/pnr-one-signal-api.php');
+    include_once(WPSNE_PATH . 'api/wpsne-one-signal-api.php');
 
     if (wpsne_get_active_menu_url() == 'setting') {
-        include_once(WPSNE_INCLUDE_PATH . '/pnr-settings.php');
+        include_once(WPSNE_INCLUDE_PATH . '/wpsne-settings.php');
     } else {
-        include_once(WPSNE_INCLUDE_PATH . '/pnr-dashboard.php');
+        include_once(WPSNE_INCLUDE_PATH . '/wpsne-dashboard.php');
     }
 
     if (wpsne_get_active_menu_url() == 'help') {
-        include_once(WPSNE_INCLUDE_PATH . '/pnr-help.php');
+        include_once(WPSNE_INCLUDE_PATH . '/wpsne-help.php');
     }
 
     if ($setUpdone) {
 
         if (wpsne_get_active_menu_url() == '') {
-            include_once(WPSNE_INCLUDE_PATH . '/pnr-subscribers.php');
+            include_once(WPSNE_INCLUDE_PATH . '/wpsne-subscribers.php');
         }
 
         if (wpsne_get_active_menu_url() == 'notifications') {
-            include_once(WPSNE_INCLUDE_PATH . '/pnr-notifications.php');
+            include_once(WPSNE_INCLUDE_PATH . '/wpsne-notifications.php');
         }
 
         if (wpsne_get_active_menu_url() == 'send-notifications') {
-            include_once(WPSNE_INCLUDE_PATH . '/pnr-send-notifications.php');
+            include_once(WPSNE_INCLUDE_PATH . '/wpsne-send-notifications.php');
         }
     }
     echo '</div>
@@ -291,7 +291,7 @@ function wpsne_add_custom_fields()
     $screens = get_post_types();
     foreach ($screens as $screen) {
         add_meta_box(
-            'pnr-auto-push-notifications',
+            'wpsne-auto-push-notifications',
             __('Push Notifications Reloaded', 'wp-send-notifications-extended'),
             'wpsne_auto_push_notifications',
             $screen,
@@ -304,7 +304,7 @@ function wpsne_add_custom_fields()
 
 function wpsne_auto_push_notifications($post)
 {
-    $notification_status  = get_post_meta($post->ID, 'pnr-auto-push-notifications', true);
+    $notification_status  = get_post_meta($post->ID, 'wpsne-auto-push-notifications', true);
     if ($post->post_status === 'publish') {
     ?>
         <input type="checkbox" name="auto_push_notifications" id="auto_push_notifications" <?php if ($notification_status == 'on') {
@@ -330,7 +330,7 @@ function save_wpsne_metabox_data($post_id)
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $auto_notification = sanitize_text_field($_POST['auto_push_notifications']);
-        update_post_meta($post_id, 'pnr-auto-push-notifications', $auto_notification);
+        update_post_meta($post_id, 'wpsne-auto-push-notifications', $auto_notification);
     }
 }
 
@@ -339,7 +339,7 @@ add_action('save_post', 'wpsne_auto_send_notifications');
 function wpsne_auto_send_notifications($post_id)
 {
 
-    include_once(WPSNE_PATH . 'api/pnr-one-signal-api.php');
+    include_once(WPSNE_PATH . 'api/wpsne-one-signal-api.php');
     global $post;
     $post_title = get_the_title($post_id);
     $post_url = get_permalink($post_id);
@@ -355,7 +355,7 @@ function wpsne_auto_send_notifications($post_id)
         if (in_array($postType, $savedPostType)) {
 
             // 2nd check post meta key enable or disable
-            $check_enable_disable  = get_post_meta($post_id, 'pnr-auto-push-notifications', true);
+            $check_enable_disable  = get_post_meta($post_id, 'wpsne-auto-push-notifications', true);
 
             if ($check_enable_disable == 'on') {
 
