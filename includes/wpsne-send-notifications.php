@@ -6,7 +6,7 @@
     <div id="dashboard-widgets" class="metabox-holder">
         <div id="postbox-container-1" class="postbox-container">
             <div class="meta-box-sortables ui-sortable">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox ">
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js"><?php _e('Send Notification', 'wp-send-notifications-extended'); ?>
                             </span>

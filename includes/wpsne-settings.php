@@ -107,7 +107,7 @@ include_once(WPSNE_INCLUDE_PATH.'/wpsne-dashboard.php');
     <div id="dashboard-widgets" class="metabox-holder">
         <div id="postbox-container-1" class="postbox-container">
             <div class="meta-box-sortables ui-sortable">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox " >
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js">
                         <?php _e('API Setup','wp-send-notifications-extended');?>
@@ -142,7 +142,7 @@ include_once(WPSNE_INCLUDE_PATH.'/wpsne-dashboard.php');
         <?php
         if( $setUpdone){ ?>
             <div class="meta-box-sortables ui-sortable wpsne-setting-page">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox " >
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js"><?php _e('Post Types ','wp-send-notifications-extended');?>
                                 </span>
@@ -184,7 +184,7 @@ include_once(WPSNE_INCLUDE_PATH.'/wpsne-dashboard.php');
             </div>
 
             <div class="meta-box-sortables ui-sortable wpsne-setting-page">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox " >
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js"><?php _e('Default Image ','wp-send-notifications-extended');?>
                                 </span>
@@ -224,7 +224,7 @@ include_once(WPSNE_INCLUDE_PATH.'/wpsne-dashboard.php');
 
         <div id="postbox-container-2" class="postbox-container">
             <div class="meta-box-sortables ui-sortable wpsne-setting-page">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox " >
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js"><?php _e('Settings','wp-send-notifications-extended');?> </span>
                         </h2>
@@ -267,7 +267,7 @@ include_once(WPSNE_INCLUDE_PATH.'/wpsne-dashboard.php');
 
             <!-- post visibility -->
             <div class="meta-box-sortables ui-sortable wpsne-setting-page">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox " >
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js">
                             <?php _e('Post Visibility','wp-send-notifications-extended');?>
@@ -308,7 +308,7 @@ include_once(WPSNE_INCLUDE_PATH.'/wpsne-dashboard.php');
             </div>
 
             <div class="meta-box-sortables ui-sortable wpsne-setting-page">
-                <div id="dashboard_quick_press" class="postbox " style="">
+                <div id="dashboard_quick_press" class="postbox " >
                     <div class="postbox-header">
                         <h2 class="hndle ui-sortable-handle"><span class="hide-if-no-js">
                         <?php _e('Custom Image','wp-send-notifications-extended');?> </span>
