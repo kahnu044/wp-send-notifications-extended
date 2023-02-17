@@ -50,8 +50,6 @@ function wpsne_css_js()
 {
     if (isset($_GET['page']) && $_GET['page'] == 'wp-send-notifications-extended') {
 
-        wp_enqueue_style("wpsne-font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-
         wp_enqueue_script("wpsne-custom-js", WPSNE_ASSETS_URL . "/js/wpsne-js.js", array('jquery'), '1.0', false);
 
         wp_enqueue_style("wpsne-custom-css", WPSNE_ASSETS_URL . '/css/wpsne-css.css');

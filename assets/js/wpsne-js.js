@@ -80,7 +80,7 @@ jQuery(document).ready(function () {
 
 
 
-    // $("#api-form").validate({
+    // jQuery("#api-form").validate({
     //     rules: {
     //         wpsne_api_key: {
     //             required: true,
@@ -110,7 +110,7 @@ jQuery(document).ready(function () {
     // });
 
     // // admin-send-notifications form validation
-    // $('#admin-send-notifications').validate({
+    // jQuery('#admin-send-notifications').validate({
     //     rules: {
     //         wpsne_ntfc_heading: {
     //             required: true,
@@ -135,7 +135,7 @@ jQuery(document).ready(function () {
     //     },
     //     submitHandler: function (form) {
     //         //get form value
-    //         var postDatas = $('#admin-send-notifications').serializeArray();
+    //         var postDatas = jQuery('#admin-send-notifications').serializeArray();
     //         postDatas.push({ name: "action", value: "wpsne_api_ajax" }, { name: "type", value: "admin_send_notifications" });
 
 
@@ -147,25 +147,25 @@ jQuery(document).ready(function () {
     //             url: pnr.ajaxurl,
     //             data: 'action=wpsne_api_ajax',
     //             beforeSend: function () {
-    //                 $("#wpsne_send_notification").attr('value', 'Sending');
+    //                 jQuery("#wpsne_send_notification").attr('value', 'Sending');
     //             },
     //             success: function (data) {
-    //                 $("#wpsne_send_notification").attr('value', 'Send');
+    //                 jQuery("#wpsne_send_notification").attr('value', 'Send');
     //                 data = JSON.parse(data);
-    //                 $('#pnr-send-result-status').show();
+    //                 jQuery('#pnr-send-result-status').show();
     //                 if (data['errors']) {
-    //                     $("#pnr-send-result-status").addClass('notice-error');
-    //                     $("#pnr-send-result-status").html("<p>" + data['errors']['0'] + "</p>");
+    //                     jQuery("#pnr-send-result-status").addClass('notice-error');
+    //                     jQuery("#pnr-send-result-status").html("<p>" + data['errors']['0'] + "</p>");
 
     //                 } else if (data['id']) {
-    //                     $("#pnr-send-result-status").addClass('notice-success');
-    //                     $("#pnr-send-result-status").html("<p>Notifications Send Successfully</p>");
+    //                     jQuery("#pnr-send-result-status").addClass('notice-success');
+    //                     jQuery("#pnr-send-result-status").html("<p>Notifications Send Successfully</p>");
 
     //                 } else {
-    //                     $("#pnr-send-result-status").addClass('notice-error');
-    //                     $("#pnr-send-result-status").html("<p>" + data + "</p>");
+    //                     jQuery("#pnr-send-result-status").addClass('notice-error');
+    //                     jQuery("#pnr-send-result-status").html("<p>" + data + "</p>");
     //                 }
-    //                 $('#admin-send-notifications')[0].reset();
+    //                 jQuery('#admin-send-notifications')[0].reset();
     //             }
     //         });
     //     }
@@ -186,12 +186,12 @@ function hidePnrField(id) {
 
 //for custom img upload
 jQuery(document).ready(function ($) {
-    $("#delete_img-btn").on("click", function (e) {
+    jQuery("#delete_img-btn").on("click", function (e) {
         e.preventDefault();
-        $('#logo_container').html("");
-        $("#delete_img-btn").hide();
+        jQuery('#logo_container').html("");
+        jQuery("#delete_img-btn").hide();
     });
-    $('#upload_img-btn').on("click", function (e) {
+    jQuery('#upload_img-btn').on("click", function (e) {
         e.preventDefault();
         var $el = jQuery(this);
         var optionImageFrame = wp.media({
@@ -213,11 +213,11 @@ jQuery(document).ready(function ($) {
             var attachment = uploaded_image.toJSON();
             var image_url = attachment.url;
             var image_id = attachment.id;
-            $('#option_image_id').val(image_id);
-            $('#pnr-custom-saved-image').hide();
-            $('#logo_container').append('<img class="logo" src="' + image_url + '" height="100px" width="100px" />');
-            $('#pnr-custom-img-url').append('<input type="hidden" name="wpsne_img_url" value="' + image_url + '" />');
-            $("#delete_img-btn").show();
+            jQuery('#option_image_id').val(image_id);
+            jQuery('#pnr-custom-saved-image').hide();
+            jQuery('#logo_container').append('<img class="logo" src="' + image_url + '" height="100px" width="100px" />');
+            jQuery('#pnr-custom-img-url').append('<input type="hidden" name="wpsne_img_url" value="' + image_url + '" />');
+            jQuery("#delete_img-btn").show();
         });
         optionImageFrame.open();
     });
