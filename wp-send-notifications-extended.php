@@ -5,10 +5,10 @@
  * Version: 1.0
  * Requires at least: 4.9
  * Requires PHP: 5.6
- * Plugin URI: https://developernoob.in/
+ * Plugin URI: https://github.com/kahnu044/wp-send-notifications-extended
  * Description: Send notifications on post/page publish,update etc
- * Author: Mr. Kanhu
- * Author URI: https://developernoob.in/
+ * Author: Kahnu Charan Swain
+ * Author URI: https://github.com/kahnu044
  * Text Domain: wp-send-notifications-extended
  * Domain Path: /languages
  */
