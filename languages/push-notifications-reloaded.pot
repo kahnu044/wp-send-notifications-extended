@@ -1,0 +1,322 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Push Notifications Reloaded\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-03 09:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.1\n"
+"X-Domain: wp-send-notifications-extended"
+
+#: includes/pnr-subscribers.php:105
+msgid ")"
+msgstr ""
+
+#: includes/pnr-dashboard.php:9
+msgid "A simple & easy way to send "
+msgstr ""
+
+#: includes/pnr-send-notifications.php:41
+msgid "Add Button Link "
+msgstr ""
+
+#: includes/pnr-send-notifications.php:30
+msgid "All"
+msgstr ""
+
+#: includes/pnr-dashboard.php:18
+msgid "API Not Setup!"
+msgstr ""
+
+#: includes/pnr-settings.php:113
+msgid "API Setup"
+msgstr ""
+
+#: includes/pnr-settings.php:249
+msgid "Auto Send Notifications On Page Publish "
+msgstr ""
+
+#: includes/pnr-settings.php:255
+msgid "Auto Send Notifications On Page Update"
+msgstr ""
+
+#: includes/pnr-settings.php:237
+msgid "Auto Send Notifications On Post Publish"
+msgstr ""
+
+#: includes/pnr-settings.php:243
+msgid "Auto Send Notifications On Post Update"
+msgstr ""
+
+#: includes/pnr-notifications.php:28 includes/pnr-subscribers.php:39
+msgid "Bulk actions"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:56
+msgid "Button Link eg. https://yoursitename.com"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:52
+msgid "Button Text eg. Visit Site"
+msgstr ""
+
+#: includes/pnr-notifications.php:70
+msgid "Clicked"
+msgstr ""
+
+#: includes/pnr-settings.php:204 includes/pnr-settings.php:312
+msgid "Custom Image"
+msgstr ""
+
+#: includes/pnr-settings.php:187
+msgid "Default Image "
+msgstr ""
+
+#: includes/pnr-notifications.php:29 includes/pnr-subscribers.php:40
+msgid "Delete"
+msgstr ""
+
+#: includes/pnr-notifications.php:69
+msgid "Delivered"
+msgstr ""
+
+#: includes/pnr-notifications.php:68
+msgid "Delivered At "
+msgstr ""
+
+#: includes/pnr-subscribers.php:99
+msgid "Edit"
+msgstr ""
+
+#: includes/pnr-notifications.php:88
+msgid "Edit "
+msgstr ""
+
+#: includes/pnr-settings.php:198
+msgid "Featured Image"
+msgstr ""
+
+#: includes/pnr-subscribers.php:81
+msgid "First Session"
+msgstr ""
+
+#: includes/pnr-dashboard.php:67
+msgid "Help"
+msgstr ""
+
+#: includes/pnr-dashboard.php:20
+msgid "HERE"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://lunacreativity.in/"
+msgstr ""
+
+#: includes/pnr-notifications.php:36 includes/pnr-subscribers.php:47
+msgid "items"
+msgstr ""
+
+#: includes/pnr-subscribers.php:82
+msgid "Last Session"
+msgstr ""
+
+#: includes/pnr-subscribers.php:84
+msgid "Location"
+msgstr ""
+
+#: includes/pnr-notifications.php:66
+msgid "Message "
+msgstr ""
+
+#. Author of the plugin
+msgid "Mr. Kanhu"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:44
+msgid "No "
+msgstr ""
+
+#: includes/pnr-settings.php:209
+msgid "No Image"
+msgstr ""
+
+#: includes/pnr-notifications.php:107
+msgid "No Notifications"
+msgstr ""
+
+#: includes/pnr-subscribers.php:119
+msgid "No Subscriber"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:24
+msgid "Notification Content(Message)"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:20
+msgid "Notification Heading"
+msgstr ""
+
+#: includes/pnr-dashboard.php:55
+msgid "Notifications"
+msgstr ""
+
+#: includes/pnr-notifications.php:34
+msgid "Notifications list navigation"
+msgstr ""
+
+#: includes/pnr-notifications.php:46
+msgid "of "
+msgstr ""
+
+#: includes/pnr-settings.php:122
+msgid "OneSignal App ID "
+msgstr ""
+
+#: includes/pnr-settings.php:128
+msgid "OneSignal Rest API"
+msgstr ""
+
+#: includes/pnr-settings.php:296
+msgid "Password Protected"
+msgstr ""
+
+#: includes/pnr-dashboard.php:21
+msgid "Please Configure API at"
+msgstr ""
+
+#: includes/pnr-settings.php:145
+msgid "Post Types "
+msgstr ""
+
+#: includes/pnr-settings.php:271
+msgid "Post Visibility"
+msgstr ""
+
+#: includes/pnr-settings.php:286
+msgid "Private"
+msgstr ""
+
+#: wp-send-notifications-extended.php:183
+msgid "Push Notifications "
+msgstr ""
+
+#. Name of the plugin
+#: wp-send-notifications-extended.php:182 wp-send-notifications-extended.php:234
+#: includes/pnr-dashboard.php:7
+msgid "Push Notifications Reloaded"
+msgstr ""
+
+#: includes/pnr-dashboard.php:10
+msgid "Push Notifications."
+msgstr ""
+
+#: includes/pnr-settings.php:323
+msgid "Remove Image"
+msgstr ""
+
+#: includes/pnr-notifications.php:71
+msgid "Segments"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:61
+msgid "Send"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:13
+msgid "Send Notification"
+msgstr ""
+
+#: includes/pnr-dashboard.php:59
+msgid "Send Notifications"
+msgstr ""
+
+#. Description of the plugin
+msgid "Send notifications on post/page publish,update etc"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:28
+msgid "Sent To"
+msgstr ""
+
+#: includes/pnr-subscribers.php:83
+msgid "Session Count"
+msgstr ""
+
+#: includes/pnr-dashboard.php:23
+msgid "Setting"
+msgstr ""
+
+#: includes/pnr-dashboard.php:63 includes/pnr-settings.php:227
+msgid "Settings"
+msgstr ""
+
+#: includes/pnr-dashboard.php:19
+msgid "Setup API"
+msgstr ""
+
+#: includes/pnr-subscribers.php:45
+msgid "Subscriber lists navigation"
+msgstr ""
+
+#: includes/pnr-dashboard.php:50
+msgid "Subscribers"
+msgstr ""
+
+#: includes/pnr-dashboard.php:24
+msgid "Tab"
+msgstr ""
+
+#: includes/pnr-notifications.php:20
+msgid "Total Notifications"
+msgstr ""
+
+#: includes/pnr-subscribers.php:30
+msgid "Total Subscribers"
+msgstr ""
+
+#: includes/pnr-subscribers.php:100
+msgid "Trash"
+msgstr ""
+
+#: includes/pnr-notifications.php:89
+msgid "Trash "
+msgstr ""
+
+#: includes/pnr-send-notifications.php:33
+msgid "Unique User Id"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:37
+msgid "Unique user Id"
+msgstr ""
+
+#: includes/pnr-settings.php:134 includes/pnr-settings.php:177
+#: includes/pnr-settings.php:213 includes/pnr-settings.php:259
+#: includes/pnr-settings.php:301 includes/pnr-settings.php:333
+msgid "Update Setting"
+msgstr ""
+
+#: includes/pnr-settings.php:320
+msgid "Upload Image"
+msgstr ""
+
+#: includes/pnr-subscribers.php:78
+msgid "UserID"
+msgstr ""
+
+#: includes/pnr-dashboard.php:6
+msgid "Welcome to"
+msgstr ""
+
+#: includes/pnr-send-notifications.php:46
+msgid "Yes"
+msgstr ""

@@ -1,0 +1,81 @@
+
+.pnr-menu-view{
+    margin-right:16px;
+}
+
+.pnr-card{
+    padding: 0;
+}
+div.error{
+    color:red;
+}
+
+.pnr-checkbox{
+margin:4px;
+}
+
+.pnr-submit{
+    margin-top: 12px !important;
+}
+
+.pnr-form-box{
+    margin-bottom: 6px !important;
+}
+
+div.pnr-tab-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+div.pnr-tab-menu li {
+    float: left;
+    margin:0;
+}
+
+div.pnr-tab-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+       /* font-weight: bold; */
+}
+
+div.pnr-tab-menu li a:hover:not(.active) {
+    /* background-color: #111; */
+    color:#94c3e5;
+}
+
+div.pnr-tab-menu .active {
+    background-color: #2271b1;
+}
+
+/* alert css */
+.show-pnr-alert {
+    background: #c0e9ca;
+    padding: 3px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    color: #0e0d0d;
+    font-size: 20px;
+}
+.pnr-show-image {
+    float: left;
+    width: 50%;
+}
+
+
+.pnr-form-box label.error{
+    color:red;
+}
+
+.pnr-alert-heading{
+    margin:5px;
+}
+.pnr-alert-desc{
+    margin:5px;
+}
