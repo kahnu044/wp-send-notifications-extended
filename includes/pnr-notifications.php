@@ -8,11 +8,11 @@ if (isset($_GET['page_no'])) {
     $page_no = $_GET['page_no'];
 }
 
-$total_notifications = pnrGetTotalNotifications();
+$total_notifications = wpsne_get_total_notifications();
 $per_page = 10;
 $total_pages = ceil($total_notifications/$per_page);
 $offset = ($page_no-1)* $per_page;
-$notifications_info = pnrGetAllNotifications($per_page,$offset);
+$notifications_info = wpsne_get_all_notifications($per_page,$offset);
 
 ?>
 

@@ -6,7 +6,7 @@ if (isset($_POST['wpsne_delete_subscriber'])) {
         if (isset($_POST['all_subscribers'])) {
             $subscribers_device_id = $_POST['all_subscribers'];
             foreach ($subscribers_device_id  as $device_id) {
-                pnrRemoveSubscribers($device_id);
+                wpsne_remove_subscribers($device_id);
             }
         }
     }
@@ -17,11 +17,11 @@ $page_no =1;
 if (isset($_GET['page_no'])) {
     $page_no = $_GET['page_no'];
 }
-$total_subscriber = pnrGetAllSubscribers();
+$total_subscriber = wpsne_get_all_subscribers();
 $per_page = 10;
 $total_pages = ceil($total_subscriber/$per_page);
 $offset = ($page_no-1)* $per_page;
-$devices_info = pnrGetAllDevices($per_page, $offset);
+$devices_info = wpsne_get_all_devices($per_page, $offset);
 ?>
 
 <div class="pnr-show-all-notifications" style="padding-top:10px">
@@ -106,7 +106,7 @@ $devices_info = pnrGetAllDevices($per_page, $offset);
                     <td data-colname="First Session"><?php _e(date('d-m-Y h:i:s a', $key->created_at),'wp-send-notifications-extended');?></td>
                     <td data-colname="Last Session"><?php _e(date('d-m-Y h:i:s a', $key->last_active),'wp-send-notifications-extended');?></td>
                     <td data-colname="Session Count"><?php _e($key->session_count,'wp-send-notifications-extended');?></td>
-                    <td data-colname="location"><?php _e(pnrGetUserLocation($key->ip),'wp-send-notifications-extended');?></td>
+                    <td data-colname="location"><?php _e(wpsne_get_user_location($key->ip),'wp-send-notifications-extended');?></td>
                 </tr>
                 <?php
                 }

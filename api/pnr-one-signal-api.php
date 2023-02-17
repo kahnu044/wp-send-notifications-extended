@@ -36,7 +36,7 @@ function wpsne_check_API_APP_Id()
 }
 
 //send onesignal notification to all users
-function pnrSendMessage($wpsne_heading, $wpsne_content, $sentTo, $addButton, $wpsne_button_text, $wpsne_button_link, $player_id)
+function wpsne_send_message($wpsne_heading, $wpsne_content, $sentTo, $addButton, $wpsne_button_text, $wpsne_button_link, $player_id)
 {
 
     // get api and app id from db
@@ -92,7 +92,7 @@ function pnrSendMessage($wpsne_heading, $wpsne_content, $sentTo, $addButton, $wp
 }
 
 // get total no of subscribed device
-function pnrGetAllSubscribers()
+function wpsne_get_all_subscribers()
 {
     $wpsne_api_key = get_option('wpsne_api_key');
     $wpsne_app_id =  get_option('wpsne_app_id');
@@ -112,7 +112,7 @@ function pnrGetAllSubscribers()
 }
 
 //get all device info by sort and limit for pagination
-function pnrGetAllDevices($per_page, $offset)
+function wpsne_get_all_devices($per_page, $offset)
 {
     $wpsne_api_key = get_option('wpsne_api_key');
     $wpsne_app_id =  get_option('wpsne_app_id');
@@ -131,7 +131,7 @@ function pnrGetAllDevices($per_page, $offset)
 }
 
 //auto send notifications
-function pnrAutoSendNotifications($wpsne_heading, $wpsne_title, $wpsne_button_text, $wpsne_button_link, $defaultImg)
+function wpsne_auto_send_notifications($wpsne_heading, $wpsne_title, $wpsne_button_text, $wpsne_button_link, $defaultImg)
 {
 
     $wpsne_api_key = get_option('wpsne_api_key');
@@ -180,7 +180,7 @@ function pnrAutoSendNotifications($wpsne_heading, $wpsne_title, $wpsne_button_te
 }
 
 //get total notifications
-function pnrGetTotalNotifications()
+function wpsne_get_total_notifications()
 {
 
     $wpsne_api_key = get_option('wpsne_api_key');
@@ -208,7 +208,7 @@ function pnrGetTotalNotifications()
 }
 
 //get all notification history
-function pnrGetAllNotifications($per_page, $offset)
+function wpsne_get_all_notifications($per_page, $offset)
 {
 
     $wpsne_api_key = get_option('wpsne_api_key');
@@ -237,7 +237,7 @@ function pnrGetAllNotifications($per_page, $offset)
 }
 
 //get location by ip
-function pnrGetUserLocation($ip)
+function wpsne_get_user_location($ip)
 {
 
     $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
@@ -246,7 +246,7 @@ function pnrGetUserLocation($ip)
 }
 
 //delete subscriber
-function pnrRemoveSubscribers($device_id)
+function wpsne_remove_subscribers($device_id)
 {
 
     // get api and app id from db

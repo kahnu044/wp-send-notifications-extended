@@ -97,11 +97,11 @@ function wpsne_send_manual_send_notification()
                         $btnLink = sanitize_text_field(stripslashes($_POST['wpsne_ntfc_btn_link']));
 
                         //api call with button link
-                        $msg['message']  = json_encode(pnrSendMessage($heading, $content, 'all', true, $btnText, $btnLink, ''));
+                        $msg['message']  = json_encode(wpsne_send_message($heading, $content, 'all', true, $btnText, $btnLink, ''));
                     }
                 } else {
                     //api call without button link
-                    $msg['message']  = pnrSendMessage($heading, $content, 'all', false, '', '', '');
+                    $msg['message']  = wpsne_send_message($heading, $content, 'all', false, '', '', '');
 
                     // print_r(json_decode($mhhh));
                 }
@@ -120,11 +120,11 @@ function wpsne_send_manual_send_notification()
                             $btnText = sanitize_text_field(stripslashes($_POST['wpsne_ntfc_btn_text']));
                             $btnLink = sanitize_text_field(stripslashes($_POST['wpsne_ntfc_btn_link']));
                             // send all with button link
-                            $msg['message'] = json_encode(pnrSendMessage($heading, $content, 'unique', true, $btnText, $btnLink, $userUniqueId));
+                            $msg['message'] = json_encode(wpsne_send_message($heading, $content, 'unique', true, $btnText, $btnLink, $userUniqueId));
                         }
                     } else {
                         // send to all without button link
-                        $msg['message'] = json_encode(pnrSendMessage($heading, $content, 'unique', false, '', '', $userUniqueId));
+                        $msg['message'] = json_encode(wpsne_send_message($heading, $content, 'unique', false, '', '', $userUniqueId));
                     }
                 }
             }
@@ -393,20 +393,20 @@ function wpsne_auto_send_notifications($post_id)
                                 $status =  get_option('wpsne_auto_' . $postType . '_update');
                                 if ($status == 'on') {
                                     $msg =  'A ' . ucfirst($postType) . ' Updated';
-                                    pnrAutoSendNotifications($msg, $post_title, 'View ' . $postType, $post_url, $defaultImg);
+                                    wpsne_auto_send_notifications($msg, $post_title, 'View ' . $postType, $post_url, $defaultImg);
                                 }
                             } else {
                                 $status =  get_option('wpsne_auto_' . $postType . '_publish');
                                 if ($status == 'on') {
                                     //now check update post type on / off
                                     $msg =  'A New ' . ucfirst($postType) . ' Published';
-                                    pnrAutoSendNotifications($msg, $post_title, 'View ' . $postType, $post_url, $defaultImg);
+                                    wpsne_auto_send_notifications($msg, $post_title, 'View ' . $postType, $post_url, $defaultImg);
                                 }
                             }
                         } else {
                             //direct send notification
                             $msg =  'A New ' . ucfirst($postType) . ' Published';
-                            pnrAutoSendNotifications($msg, $post_title, 'View ' . $postType, $post_url, $defaultImg);
+                            wpsne_auto_send_notifications($msg, $post_title, 'View ' . $postType, $post_url, $defaultImg);
                         }
                     }
                 }
