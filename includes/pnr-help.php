@@ -1,14 +1,14 @@
 <h2>Onesignal Official Documentation - <a href="https://documentation.onesignal.com/docs/web-push-quickstart" target="_blank" rel="noopener noreferrer">Click Here</a>
 </h2>
 
-<div class="pnr-help-section">
+<div class="wpsne-help-section">
 
 
-    <div class="pnr-signup-block">
+    <div class="wpsne-signup-block">
         <h3>Signup To Onesignal - <a href="JavaScript:void(0)" onclick="api_signup_window()"> Here</a></h3>
     </div>
 
-    <div class="pnr-find-app-id" id="find-app-id">
+    <div class="wpsne-find-app-id" id="find-app-id">
         <h4>How to Find Your API Key & App Id</h4>
         <p>Click On Your App Name</p>
         <ol>Go to <b>Settings</b> And click On <b>Keys & Ids</b></ol>

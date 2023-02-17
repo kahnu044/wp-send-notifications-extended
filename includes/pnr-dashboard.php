@@ -1,12 +1,12 @@
 <div id="wpbody " style="padding:0px" role="main">
     <div id="wpbody-content" style="padding-bottom:0px">
-        <div class="pnr-menu-view">
+        <div class="wpsne-menu-view">
             <div class="wrap" style="margin:0">
-                <div class="show-pnr-alert">
-                    <h4 class="pnr-alert-heading"><?php _e('Welcome to','wp-send-notifications-extended');?>
+                <div class="show-wpsne-alert">
+                    <h4 class="wpsne-alert-heading"><?php _e('Welcome to','wp-send-notifications-extended');?>
                         <b><?php _e('Push Notifications Reloaded','wp-send-notifications-extended');?> </b>
                     </h4>
-                    <p class="pnr-alert-desc"><?php _e('A simple & easy way to send ','wp-send-notifications-extended');?>
+                    <p class="wpsne-alert-desc"><?php _e('A simple & easy way to send ','wp-send-notifications-extended');?>
                         <b><?php _e('Push Notifications.','wp-send-notifications-extended');?></b>
                     </p>
                 </div>
@@ -44,7 +44,7 @@
                 $active_menu =  wpsne_get_active_menu_url();
 
                 ?>
-                <div class="pnr-tab-menu">
+                <div class="wpsne-tab-menu">
                     <ul>
                         <li><a class="  <?php if ($active_menu == '') { echo 'active';} ?> " aria-current="page"
                                 href="<?php echo WPSNE_ADMIN_URL; ?>"><?php _e('Subscribers','wp-send-notifications-extended');?></a>

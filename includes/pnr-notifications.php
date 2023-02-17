@@ -16,7 +16,7 @@ $notifications_info = wpsne_get_all_notifications($per_page,$offset);
 
 ?>
 
-<div class="pnr-show-all-notifications" style="padding-top:10px">
+<div class="wpsne-show-all-notifications" style="padding-top:10px">
     <h2 class="screen-reader-text">Filter Notifications List</h2>
     <ul class="subsubsub">
         <li class="all"><?php _e('Total Notifications','wp-send-notifications-extended');?>

@@ -1,28 +1,28 @@
 
-.pnr-menu-view{
+.wpsne-menu-view{
     margin-right:16px;
 }
 
-.pnr-card{
+.wpsne-card{
     padding: 0;
 }
 div.error{
     color:red;
 }
 
-.pnr-checkbox{
+.wpsne-checkbox{
 margin:4px;
 }
 
-.pnr-submit{
+.wpsne-submit{
     margin-top: 12px !important;
 }
 
-.pnr-form-box{
+.wpsne-form-box{
     margin-bottom: 6px !important;
 }
 
-div.pnr-tab-menu ul {
+div.wpsne-tab-menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,12 +30,12 @@ div.pnr-tab-menu ul {
     background-color: #333;
 }
 
-div.pnr-tab-menu li {
+div.wpsne-tab-menu li {
     float: left;
     margin:0;
 }
 
-div.pnr-tab-menu li a {
+div.wpsne-tab-menu li a {
     display: block;
     color: white;
     text-align: center;
@@ -44,17 +44,17 @@ div.pnr-tab-menu li a {
        /* font-weight: bold; */
 }
 
-div.pnr-tab-menu li a:hover:not(.active) {
+div.wpsne-tab-menu li a:hover:not(.active) {
     /* background-color: #111; */
     color:#94c3e5;
 }
 
-div.pnr-tab-menu .active {
+div.wpsne-tab-menu .active {
     background-color: #2271b1;
 }
 
 /* alert css */
-.show-pnr-alert {
+.show-wpsne-alert {
     background: #c0e9ca;
     padding: 3px;
     margin-top: 1rem;
@@ -63,19 +63,19 @@ div.pnr-tab-menu .active {
     color: #0e0d0d;
     font-size: 20px;
 }
-.pnr-show-image {
+.wpsne-show-image {
     float: left;
     width: 50%;
 }
 
 
-.pnr-form-box label.error{
+.wpsne-form-box label.error{
     color:red;
 }
 
-.pnr-alert-heading{
+.wpsne-alert-heading{
     margin:5px;
 }
-.pnr-alert-desc{
+.wpsne-alert-desc{
     margin:5px;
 }

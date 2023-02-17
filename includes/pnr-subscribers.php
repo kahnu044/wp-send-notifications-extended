@@ -24,7 +24,7 @@ $offset = ($page_no-1)* $per_page;
 $devices_info = wpsne_get_all_devices($per_page, $offset);
 ?>
 
-<div class="pnr-show-all-notifications" style="padding-top:10px">
+<div class="wpsne-show-all-notifications" style="padding-top:10px">
     <h2 class="screen-reader-text">Filter posts list</h2>
     <ul class="subsubsub">
         <li class="all"><?php _e('Total Subscribers','wp-send-notifications-extended');?>
