@@ -94,12 +94,19 @@ function wpsne_send_manual_send_notification()
                         $btnText = sanitize_text_field(stripslashes($_POST['wpsne_ntfc_btn_text']));
                         $btnLink = sanitize_text_field(stripslashes($_POST['wpsne_ntfc_btn_link']));
 
+                        echo 'ddddddddddd';
                         //api call with button link
                         $msg['message']  = json_encode(wpsne_send_message($heading, $content, 'all', true, $btnText, $btnLink, ''));
                     }
                 } else {
                     //api call without button link
-                    $msg['message']  = wpsne_send_message($heading, $content, 'all', false, '', '', '');
+                    $response =  wpsne_send_message($heading, $content, 'all', false, '', '', '');
+
+                    if ($response->errors) {
+                    }
+
+                    // print_r( );
+                    echo 'eeeeeeeeee';
 
                     // print_r(json_decode($mhhh));
                 }
@@ -128,7 +135,7 @@ function wpsne_send_manual_send_notification()
             }
         }
 
-        // print_r($msg['message']);
+        print_r($msg['message']);
 
         echo json_encode($msg);
         // echo $msg;
@@ -266,6 +273,42 @@ function wpsne_menu_view()
 
         if (wpsne_get_active_menu_url() == '') {
             include_once(WPSNE_INCLUDE_PATH . '/wpsne-subscribers.php');
+            $wpsne_api_key = get_option('wpsne_api_key');
+            $wpsne_app_id = get_option('wpsne_app_id');
+            $headers = array(
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Basic ' . $wpsne_api_key
+            );
+            $url = 'https://onesignal.com/api/v1/players?app_id=' . $wpsne_app_id;
+            $response = wp_remote_get($url, array(
+                'headers' => $headers,
+                'sslverify' => false,
+            ));
+
+            if (is_wp_error($response)) {
+                $data = array(
+                    'error' => true,
+                    'value' => $response->get_error_message()
+                );
+            } else {
+                $data = json_decode(wp_remote_retrieve_body($response));
+                if (property_exists($data, 'errors')) {
+                    $data = array(
+                        'error' => true,
+                        'value' => $data->errors[0]
+                    );
+                } else {
+                    $data = array(
+                        'error' => false,
+                        'status' => 'success',
+                        'data' => $data
+                    );
+                }
+            }
+
+            echo '<pre>';
+            print_r($data);
+            echo '</pre>';
         }
 
         if (wpsne_get_active_menu_url() == 'notifications') {

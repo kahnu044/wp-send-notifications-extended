@@ -30,7 +30,6 @@ Install my-project with npm
 Create an account in OneSignal.com
 
 ```bash
-  Copy the credentials 
+  Copy the credentials
   Activate the plugin settings
 ```
-    

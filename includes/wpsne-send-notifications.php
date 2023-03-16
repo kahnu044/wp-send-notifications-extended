@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <p class="submit wpsne-submit">
-                                <input type="button" name="wpsne_send_notification" id="wpsne_send_notification" class="button button-primary" value="<?php _e('Send', 'wp-send-notifications-extended'); ?>"> <br class="clear">
+                                <input type="button" name="wpsne_send_notification" id="wpsne_send_notification" class="button button-primary" value="<?php _e('Sends', 'wp-send-notifications-extended'); ?>"> <br class="clear">
                             </p>
                         </form>
 
